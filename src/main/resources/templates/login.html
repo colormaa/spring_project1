@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head th:replace="/fragment/head"></head>
+<body>
+   <nav th:replace="/fragment/nav :: nav-front"></nav>
+      <div class="container-fluid mt-5">
+        <div class="row">
+            <div  th:replace="/fragment/categories"></div>
+            <div class="col">
+               
+            </div>
+            <div class="col-6 text-center">
+              <h4 class="display-4">Login</h4>
+
+              <div class="alert alert-danger" th:if="${param.error}">Invalid credentials</div>
+
+              <form th:action="@{/login}" method="post">
+                
+                <div class="form-group">
+                  <label for="">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Username"/>
+                </div>
+                <div class="form-group">
+                  <label for="">Password</label>
+                  <input type="password" class="form-control" id="password" name="password"/> 
+                </div>
+                
+                <button class="btn btn-danger mb-5">Login</button>
+                <p>Click <a th:href="@{'/register'}"> here </a> to register.</p>
+              </form>
+            </div>
+            <div class="col"></div>
+        </div>
+      </div>
+   <footer th:replace="/fragment/footer"></footer>
+   
+</body>
+</html>

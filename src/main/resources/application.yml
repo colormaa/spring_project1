@@ -1,0 +1,5 @@
+spring:
+  security: 
+    user:
+      name: user
+      password: 5d6c2a01-995e-48ca-b521-31c0ac1fe6d8
